@@ -21,14 +21,14 @@ func TestECIES(t *testing.T) {
 	t.Log("原文：", srcInfo)
 
 	// 加密信息
-	cryptData, err := EnCryptByEcies(srcInfo, PemKeyPath+"publicKey.pem")
+	cryptData, err := EnCryptByEcies(srcInfo, PemKeyPath+"ECCPublicKey.pem")
 	if err != nil {
 		t.Fatal(err.Error())
 	}
 	t.Log("ECIES加密后为：", cryptData)
 
 	// 解密信息
-	srcData, err := DeCryptByEcies(cryptData, PemKeyPath+"privateKey.pem")
+	srcData, err := DeCryptByEcies(cryptData, PemKeyPath+"ECCPrivateKey.pem")
 	if err != nil {
 		t.Fatal(err.Error())
 	}

@@ -22,14 +22,14 @@ func TestECDSA(t *testing.T) {
 	t.Log("原文：", srcInfo)
 
 	// ECC签名加密
-	signByEcc, err := CryptSignByEcc(srcInfo, PemKeyPath+"privateKey.pem", randSign)
+	signByEcc, err := CryptSignByEcc(srcInfo, PemKeyPath+"ECCPrivateKey.pem", randSign)
 	if err != nil {
 		t.Fatal(err.Error())
 	}
 	t.Log("ECDSA私钥加密签名为：", signByEcc)
 
 	// ECC签名算法校验
-	verifyCryptEcc, err := VerifyCryptEcc(srcInfo, signByEcc,PemKeyPath+"publicKey.pem")
+	verifyCryptEcc, err := VerifyCryptEcc(srcInfo, signByEcc,PemKeyPath+"ECCPublicKey.pem")
 	if err != nil {
 		t.Fatal(err.Error())
 	}

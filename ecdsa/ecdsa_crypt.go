@@ -6,6 +6,7 @@ import (
 	"crypto/ecdsa"
 	"encoding/hex"
 	"errors"
+	"github.com/gofuncchan/encrypt/coding"
 	"math/big"
 	"strings"
 )
@@ -18,7 +19,7 @@ import (
 */
 func CryptSignByEcc(input, priKeyFile, randSign string) (output string, err error) {
 	// 获取私钥
-	privateKey, err := GetPrivateKeyByPemFile(priKeyFile)
+	privateKey, err := coding.ParseECCPrivatePemKey(priKeyFile)
 	if err != nil {
 		return "", err
 	}
@@ -60,7 +61,7 @@ func CryptSignByEcc(input, priKeyFile, randSign string) (output string, err erro
 @param cryptStr  密文
 @param publicFile 公钥文件
 */
-func VerifyCryptEcc(srcStr, cryptStr, publicFile string) (bool, error) {
+func VerifyCryptEcc(srcStr, cryptStr, pubKeyFile string) (bool, error) {
 
 	decodeBytes, err := hex.DecodeString(cryptStr)
 	if err != nil {
@@ -71,7 +72,7 @@ func VerifyCryptEcc(srcStr, cryptStr, publicFile string) (bool, error) {
 	rint, sint, err := UnSignCryptEcc(decodeBytes)
 
 	// 获取公钥验证数据
-	publicKey, err := GetPublicKeyByPemFile(publicFile)
+	publicKey, err := coding.ParseECCPublicPemKey(pubKeyFile)
 	if err != nil {
 		return false, err
 	}

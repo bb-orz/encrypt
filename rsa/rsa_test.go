@@ -18,13 +18,13 @@ func TestRSA(t *testing.T) {
 	srcInfo := "RSA非对称加解密测试"
 
 	// 公钥加密
-	encryptBytes, err := EnCryptByRSA([]byte(srcInfo), PemKeyPath+"publicKey.pem")
+	encryptBytes, err := EnCryptByRSA([]byte(srcInfo), PemKeyPath+"RSAPublicKey.pem")
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	// 私钥解密
-	decryptBytes, err := DeCryptByRSA(encryptBytes, PemKeyPath+"privateKey.pem")
+	decryptBytes, err := DeCryptByRSA(encryptBytes, PemKeyPath+"RSAPrivateKey.pem")
 	if err != nil {
 		t.Fatal(err)
 	}

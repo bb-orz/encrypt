@@ -1,7 +1,7 @@
 ## encrypt
-some simple encrypt utils for go program.
+some useful encrypt tools for go program.
 
-一些简单实用的数据加解密编解码工具包
+一些实用的数据加解密编解码工具包
 
 #### 安装
 `go get -u github.com/gofuncchan/encrypt`
@@ -21,11 +21,8 @@ some simple encrypt utils for go program.
 - 数字签名
     - ecdsa
 
-#### 数据编解码包
+#### 加密相关数据编解码包
 
-- base64
-- url解析
-- 十六进制编码
-- json编解码
-- yaml编解码
-- cvs编解码
+- base64编解码
+- 十六进制编解码
+- pem编解码
