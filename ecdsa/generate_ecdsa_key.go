@@ -3,7 +3,7 @@ package ecdsa
 import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
-	"github.com/gofuncchan/encrypt/coding"
+	"encrypt/coding"
 	"time"
 
 	"errors"

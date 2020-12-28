@@ -3,7 +3,7 @@ package rsa
 import (
 	"crypto/rand"
 	"crypto/rsa"
-	"github.com/gofuncchan/encrypt/coding"
+	"encrypt/coding"
 )
 
 

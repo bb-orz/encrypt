@@ -4,7 +4,7 @@ some useful encrypt tools for go program.
 一些实用的数据加解密编解码工具包
 
 #### 安装
-`go get -u github.com/gofuncchan/encrypt`
+`go get -u encrypt`
 
 #### 加解密工具包：
 

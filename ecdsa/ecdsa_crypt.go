@@ -6,7 +6,7 @@ import (
 	"crypto/ecdsa"
 	"encoding/hex"
 	"errors"
-	"github.com/gofuncchan/encrypt/coding"
+	"encrypt/coding"
 	"math/big"
 	"strings"
 )

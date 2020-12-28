@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/ethereum/go-ethereum/crypto/ecies"
-	"github.com/gofuncchan/encrypt/coding"
+	"encrypt/coding"
 )
 
 

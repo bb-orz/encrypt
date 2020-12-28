@@ -3,7 +3,7 @@ package ecies
 import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
-	"github.com/gofuncchan/encrypt/coding"
+	"encrypt/coding"
 	"strings"
 	"time"
 
